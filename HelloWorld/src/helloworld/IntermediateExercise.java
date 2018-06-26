@@ -59,15 +59,9 @@ public class IntermediateExercise {
         int temperature = a;
 
         if (isSummer == true) {
-            if (temperature > 60 && temperature < 100) {
-                return true;
-            } else {
-                return false;
-            }
-        } else if (temperature > 60 && temperature < 90) {
-            return true;
+            return temperature > 60 && temperature < 100;
         } else {
-            return false;
+            return temperature > 60 && temperature < 90;
         }
 
     }

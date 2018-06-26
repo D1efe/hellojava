@@ -68,31 +68,29 @@ public class Main {
         ieOb.unique(1, 1, 2);
 
         //Task 14 - TOO HOT?
-        System.out.println(ieOb.tooHot(100, true));
+        System.out.println(ieOb.tooHot(100, false));
 
-        //Task 15 - Person
+        //Task 15 - Person : from line 74 to line 93
         Person Daniel = new Person("Daniel", 23, "Consultant");
         Person Syed = new Person("Syed", 23, "Consultant");
         Person Aisha = new Person("Aisha", 23, "Consultant");
         Person Fozia = new Person("Fozia", 23, "Consultant");
         Person Rachel = new Person("Rachel", 23, "Consultant");
 
-                
         ArrayList<Person> peopleList = new ArrayList<>();
-        
+
         peopleList.add(0, Daniel);
         peopleList.add(1, Syed);
         peopleList.add(2, Aisha);
         peopleList.add(3, Fozia);
-        peopleList.add(4 ,Rachel);
-        
-        for(Person x : peopleList) {
+        peopleList.add(4, Rachel);
+
+        for (Person x : peopleList) {
             System.out.println(x.toString());
-            
-            
         }
-        
-        
+
+        System.out.println("");
+        findPerson(peopleList, "Daniel");
 
     }
 
@@ -107,8 +105,8 @@ public class Main {
         return "Hello World!";
 
     }
-    //task 5, 6, 7 method - PARAMETERS/OPERATORS, CONDITIONALS, CONDITIONALS 2
 
+    //task 5, 6, 7 method - PARAMETERS/OPERATORS, CONDITIONALS, CONDITIONALS 2
     private static int sumNumbers(int a, int b, boolean anyValue) {
         int total;
 
@@ -123,6 +121,20 @@ public class Main {
 
         }
         return total;
+    }
+
+    //Task 15 method method - Person 
+    public static void findPerson(ArrayList<Person> x, String who2) {
+
+        for (Person y : x) {
+
+            if (who2 == y.getName()) {
+                System.out.println(y.toString());
+                break;
+
+            }
+
+        }
     }
 
 }
