@@ -1,7 +1,7 @@
 package helloworld;
 
+import java.util.ArrayList;
 import java.util.Random;
-import java.lang.Math.*;
 
 public class Main {
 
@@ -35,7 +35,6 @@ public class Main {
             Random rng = new Random();
             int number = rng.nextInt(10);
             System.out.println("array index " + i + ": " + sumNumbers(numberArray[number], numberArray[number], true));
-            
 
         }
         //Task 10 - ITERATION/ARRAYS
@@ -54,16 +53,46 @@ public class Main {
         for (int x : moreNumbers) {
             System.out.println("index multipled by 10: " + x * 10);
         }
-        
-              
+
         //Used with intermediate tasks
-        IntermediateExercise oob = new IntermediateExercise();
+        IntermediateExercise ieOb = new IntermediateExercise();
+
+        //Task 12 - BLACKJACK, stored in IntermediateExercise
+        ieOb.blackJack(18, 21);
+        ieOb.blackJack(20, 18);
+        ieOb.blackJack(22, 22);
+
+        //Task 13 - UNIQUE, stored in IntermediateExercise
+        ieOb.unique(1, 2, 3);
+        ieOb.unique(3, 3, 3);
+        ieOb.unique(1, 1, 2);
+
+        //Task 14 - TOO HOT?
+        System.out.println(ieOb.tooHot(100, true));
+
+        //Task 15 - Person
+        Person Daniel = new Person("Daniel", 23, "Consultant");
+        Person Syed = new Person("Syed", 23, "Consultant");
+        Person Aisha = new Person("Aisha", 23, "Consultant");
+        Person Fozia = new Person("Fozia", 23, "Consultant");
+        Person Rachel = new Person("Rachel", 23, "Consultant");
+
+                
+        ArrayList<Person> peopleList = new ArrayList<>();
         
-        //Task 12 - BLACKJACK
-        oob.blackJack();
+        peopleList.add(0, Daniel);
+        peopleList.add(1, Syed);
+        peopleList.add(2, Aisha);
+        peopleList.add(3, Fozia);
+        peopleList.add(4 ,Rachel);
         
-        //Task 13 - TOO HOT?
-        System.out.println(oob.tooHot(100, true));
+        for(Person x : peopleList) {
+            System.out.println(x.toString());
+            
+            
+        }
+        
+        
 
     }
 

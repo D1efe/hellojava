@@ -8,15 +8,21 @@ public class IntermediateExercise {
     private Scanner userInput = new Scanner(System.in);
 
     //Task 12 - BLACKJACK (using random number generation)
-    public void blackJack() {
-        Random rand1 = new Random();
-        Random rand2 = new Random();
-
-        int card1 = rand1.nextInt(30);
-        int card2 = rand2.nextInt(30);
+    //comment lines 19, 20 and uncomment lines 13, 14, 22, 23, 25 for random number use
+    public void blackJack(int a, int b) {
+        //Random rand1 = new Random();
+        //Random rand2 = new Random();
+        int card1;
+        int card2;
         int result;
 
-        System.out.println("your numbers are: " + card1 + " & " + card2);
+        card1 = a;
+        card2 = b;
+
+        //card1 = rand1.nextInt(30);
+        //card2 = rand2.nextInt(30);
+        //int result;
+        System.out.print("your numbers are: " + card1 + " & " + card2 + " : ");
 
         if (card1 > 21 && card2 > 21) {
             result = 0;
